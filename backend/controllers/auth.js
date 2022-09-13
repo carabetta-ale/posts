@@ -67,7 +67,7 @@ exports.login = async (req, res, next) => {
         'somesupersecretsecret',
         { expiresIn: '1h' }
     );
-
+  res.status(200).json({ token: token, userId: storedUser.id });
  }catch (err) {
 
         if (!err.statusCode) {
