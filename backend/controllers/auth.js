@@ -62,7 +62,7 @@ exports.login = async (req, res, next) => {
     const token = jwt.sign(
         {
             email: storedUser.email,
-            userId: storedUser.id.toString()
+            userId: storedUser.id
         },
         'somesupersecretsecret',
         { expiresIn: '1h' }

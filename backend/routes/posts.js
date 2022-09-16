@@ -22,7 +22,7 @@ router.post(
 );
 
 router.delete(
-    '/:id',auth, postsController.delete);
+    '/:id',auth, postsController.deletePost);
 
 module.exports = router;
 

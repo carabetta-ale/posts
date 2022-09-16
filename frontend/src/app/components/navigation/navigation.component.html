@@ -11,7 +11,7 @@
         <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/login">
             <span>Login</span>
         </a>
-        <a *ngIf="isAuthenticated" (click)="logout" routerLinkActive="active-link" routerLink="/login">
+        <a *ngIf="isAuthenticated" (click)="logout()" routerLinkActive="active-link" routerLink="/login">
           <span>Logout</span>
       </a>
         <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/signup">

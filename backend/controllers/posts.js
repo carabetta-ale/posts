@@ -6,7 +6,7 @@ const Post = require('../models/post');
 exports.fetchAll = async (req, res, next) => {
     try{
         const [allPosts] = await Post.fetchAll();
-        res.status(200).json({ message: 'Fetched posts successfully.', posts: allPosts });
+        res.status(200).json(allPosts);
     }catch(err){
         if(!err.statusCode){
             err.statusCode = 500;
@@ -42,7 +42,7 @@ exports.postPost = async (req, res, next) => {
     }
 };
 
-exports.delete = async (req, res, next) => {
+exports.deletePost = async (req, res, next) => {
     try{
         const id = req.params.id;
         const deleteResponse = await Post.delete(id);
